@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drag And Drop View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DragAndDropViewController" customModule="DragAndDropDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1b8-Pw-qla" userLabel="backgroundView">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSl-hp-RTI" userLabel="dropView">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="748"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mXY-YD-4Bg">
+                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="748"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="mXY-YD-4Bg" secondAttribute="bottom" id="4bR-XZ-njs"/>
+                                            <constraint firstAttribute="trailing" secondItem="mXY-YD-4Bg" secondAttribute="trailing" id="6vE-Cv-9Ou"/>
+                                            <constraint firstItem="mXY-YD-4Bg" firstAttribute="leading" secondItem="xSl-hp-RTI" secondAttribute="leading" id="VVD-bU-gB8"/>
+                                            <constraint firstItem="mXY-YD-4Bg" firstAttribute="top" secondItem="xSl-hp-RTI" secondAttribute="top" id="daK-hl-2Vl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xSl-hp-RTI" firstAttribute="leading" secondItem="1b8-Pw-qla" secondAttribute="leading" id="9mD-xv-eYO"/>
+                                    <constraint firstItem="xSl-hp-RTI" firstAttribute="top" secondItem="1b8-Pw-qla" secondAttribute="top" id="IHa-HP-CeH"/>
+                                    <constraint firstAttribute="bottom" secondItem="xSl-hp-RTI" secondAttribute="bottom" id="MT6-Us-ul7"/>
+                                    <constraint firstAttribute="trailing" secondItem="xSl-hp-RTI" secondAttribute="trailing" id="kGE-dB-U7x"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1b8-Pw-qla" secondAttribute="bottom" id="FjT-tX-ViF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1b8-Pw-qla" secondAttribute="trailing" id="Zlg-Xo-74r"/>
+                            <constraint firstItem="1b8-Pw-qla" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wDK-eD-pvI"/>
+                            <constraint firstItem="1b8-Pw-qla" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zVh-Rn-CVK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="1b8-Pw-qla" id="nLy-mF-w7h"/>
+                        <outlet property="dropView" destination="xSl-hp-RTI" id="u6Y-n9-l4x"/>
+                        <outlet property="imageView" destination="mXY-YD-4Bg" id="1Dk-A2-qla"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
